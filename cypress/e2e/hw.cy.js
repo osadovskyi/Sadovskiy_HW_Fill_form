@@ -22,7 +22,7 @@ describe('Fill form test', () => {
     ]
 
     dataFillForms.forEach(dataFillForm => {
-        it(`Fill form: ${dataFillForm}`, () => {
+        it(`Fill form with email ${dataFillForm.testData.email} and password ${dataFillForm.testData.password}`, () => {
             cy.visit('https://sanitarskyi-ngx-admin.herokuapp.com');
             cy.get('.theme-preview[alt="Material Dark Theme"]').click();
             cy.get('[class="menu-title ng-tns-c141-9"]').click();
@@ -81,7 +81,7 @@ describe('Fill Block Form', () => {
     ]
 
     dataBlockForms.forEach(dataBlockForm => {
-        it(`Fill block form: ${dataBlockForm}`, () => {
+        it(`Fill block form with Email ${dataBlockForm.blockTestData.Email} and Website ${dataBlockForm.blockTestData.Website}`, () => {
             cy.visit('https://sanitarskyi-ngx-admin.herokuapp.com');
             cy.get('.theme-preview[alt="Material Dark Theme"]').click();
             cy.get('[class="menu-title ng-tns-c141-9"]').click();
